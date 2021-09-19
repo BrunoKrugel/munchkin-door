@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "type": "Maldição",
+    "text": "Proident voluptate veniam voluptate mollit reprehenderit anim officia et ea ex laboris nulla laboris. Nulla ut aliquip fugiat tempor veniam sint aliqua reprehenderit tempor Lorem commodo anim.",
+    "bonus": "",
+    "text_add": "Scenty"
+  },
+  {
+    "id": "2",
+    "type": "Item",
+    "text": "Mollit Lorem reprehenderit qui elit id aliqua. Deserunt ipsum ad cupidatat ullamco ut aliqua est do consectetur nostrud sit esse.",
+    "bonus": "+5",
+    "text_add": ""
+  }
+]
