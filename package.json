@@ -1,5 +1,15 @@
 {
   "dependencies": {
     "ws": "^8.2.2"
-  }
+  },
+  "name": "treasure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BrunoKrugel/munchkin-treasure.git",
+  "author": "brunokrugel <brunokrugel@gmail.com>",
+  "license": "MIT",
+    "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "type": "module"
 }
