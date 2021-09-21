@@ -6,13 +6,13 @@ export async function parseMessage(payload) {
   const json = JSON.parse(String(payload));
   switch (json.event) {
     case 'RESET':
-      return 'RESET';
+      await reset();
+      return 'doorCard_reset_ok';
     case 'OPEN':
-      pick().then((value) => {
+      return await pick().then((value) => {
         console.log('value: ' + value);
         return value;
       });
-      break;
     case 'OPEN_SECOND':
       return 'OPEN_SECOND';
     default:
