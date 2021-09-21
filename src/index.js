@@ -11,18 +11,13 @@ const wss = new WebSocketServer({
 });
 
 wss.on('connection', function connection(ws) {
-  function message(event, data) {
-    ws.send(JSON.stringify({
-      event,
-      data
-    }));
+  function message(value) {
+    ws.send(value);
   }
 
   ws.on('message', function incoming(payload) {
     parseMessage(payload).then((value) => {
-      const json = JSON.parse(String(payload));
-      message(json.event, value);
+      message(value);
     });
   });
-  ws.send('something');
 });

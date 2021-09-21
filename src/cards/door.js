@@ -17,7 +17,7 @@ export async function pick() {
         index++;
         var cardFlag = await card.get(String(cardPicked), 'false');
         console.log("I read: " + cardFlag);
-        if (index > 5) return "No more cards available";
+        if (index > 5) return "no_cards_available";
         if (cardFlag != 'true') {
             console.log("cardFlag == false");
             newCard = false;
