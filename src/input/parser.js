@@ -1,5 +1,5 @@
 import {
-  pick
+  pick, reset
 } from '../cards/open.js';
 
 export async function parseMessage(payload) {
@@ -10,7 +10,6 @@ export async function parseMessage(payload) {
       return 'doorCard_reset_ok';
     case 'OPEN':
       return await pick().then((value) => {
-        console.log('value: ' + value);
         return value;
       });
     case 'OPEN_SECOND':

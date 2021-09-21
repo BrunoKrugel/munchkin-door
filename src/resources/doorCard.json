@@ -8,6 +8,24 @@
   "2": {
     "type": "Item",
     "text": "Mollit Lorem reprehenderit qui elit id aliqua. Deserunt ipsum ad cupidatat ullamco ut aliqua est do consectetur nostrud sit esse.",
+    "bonus": "+2",
+    "text_add": ""
+  },
+  "3": {
+    "type": "Item",
+    "text": "Mollit Lorem reprehenderit qui elit id aliqua. Deserunt ipsum ad cupidatat ullamco ut aliqua est do consectetur nostrud sit esse.",
+    "bonus": "+3",
+    "text_add": ""
+  },
+  "4": {
+    "type": "Item",
+    "text": "Mollit Lorem reprehenderit qui elit id aliqua. Deserunt ipsum ad cupidatat ullamco ut aliqua est do consectetur nostrud sit esse.",
+    "bonus": "+4",
+    "text_add": ""
+  },
+  "5": {
+    "type": "Item",
+    "text": "Mollit Lorem reprehenderit qui elit id aliqua. Deserunt ipsum ad cupidatat ullamco ut aliqua est do consectetur nostrud sit esse.",
     "bonus": "+5",
     "text_add": ""
   }
