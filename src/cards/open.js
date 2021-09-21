@@ -16,6 +16,6 @@ export async function pick() {
     return cardPicked;
 }
 
-export async function reset(){
+export async function reset() {
     await keyv.clear();
 }
