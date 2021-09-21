@@ -1,5 +1,6 @@
 import {
-  pick, reset
+  pick,
+  reset
 } from '../cards/open.js';
 
 export async function parseMessage(payload) {
@@ -12,8 +13,6 @@ export async function parseMessage(payload) {
       return await pick().then((value) => {
         return value;
       });
-    case 'OPEN_SECOND':
-      return 'OPEN_SECOND';
     default:
       return 'No matching statements.';
   }
