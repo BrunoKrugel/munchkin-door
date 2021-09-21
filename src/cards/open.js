@@ -1,30 +1,34 @@
 import Keyv from 'keyv';
-const card = new Keyv(); // for in-memory storage
 
 import {
     createRequire
 } from "module";
 
-const require = createRequire(import.meta.url);
-
+const require = createRequire(
+    import.meta.url);
+    
+const card = new Keyv(); // for in-memory storage
 var doorCard = require('../resources/doorCard.json');
 
 export async function pick() {
-    var newCard = new Boolean(true);
-    var cardPicked = Math.floor((Math.random() * 5));
+    let index = 0;
+    let newCard = new Boolean(true);
+    let cardPicked = Math.floor((Math.random() * (4)) + 1);
     console.log("I picked: " + cardPicked);
     while (newCard) {
-        var cardFlag = await card.get('card', cardPicked);
+        index++;
+        let cardFlag = await card.get(String(cardPicked), 'false');
         console.log("I read: " + cardFlag);
-        if (cardFlag != cardPicked) {
-            console.log("cardFlag != cardPicked");
+        if (index > 5) return "No more cards available";
+        if (cardFlag != 'true') {
+            console.log("cardFlag == false");
             newCard = false;
         } else {
-            cardPicked = Math.floor((Math.random() * 5));
+            cardPicked = Math.floor((Math.random() * (4)) + 1);
             console.log("I re-picked: " + cardPicked);
         }
     }
-    await card.set('card', cardPicked);
+    await card.set(String(cardPicked), 'true');
     return JSON.stringify(doorCard[cardPicked])
 }
 
